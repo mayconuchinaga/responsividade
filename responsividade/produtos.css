@@ -1,0 +1,164 @@
+*{
+    font-family: "ABChanel PB SemiBold M";
+    margin: 0;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative; /* Necessário para o posicionamento do dropdown */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block; /* Torna o link clicável em toda a área */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #484848;
+}
+
+/* Estilo do dropdown */
+nav ul li .dropdown-content {
+    display: none; /* Esconde o submenu inicialmente */
+    position: absolute; /* Posiciona o submenu em relação ao item pai */
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(211, 211, 211, 0.2);
+    z-index: 1; /* Garante que o submenu fique acima de outros elementos */
+    min-width: 160px;
+    padding: 0;
+}
+
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #d4d4d4; /* Cor de fundo ao passar o mouse sobre o submenu */
+}
+
+/* Exibe o submenu ao passar o mouse sobre o item principal */
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+.alec{
+    background-color: black;
+    padding: 0.2px;
+    width: 100;
+}
+
+.texto1{
+    font-size: 18px;
+    text-align: center;
+}
+
+.grid-gallery-container{
+    display: grid;/*ativa o css grid*/
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /*define o grid com as colunas flexiveis*/
+    gap: 100px; /*espaçamento*/
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+/*cada item da galeria*/
+.grid-gallery-item{
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/*estilo para as imagens*/
+.grid-gallery-item img{
+    width: 100%;
+    height: auto;
+}
+
+.grid-gallery-container:hover .grid-gallery-item{
+    opacity: .5;
+}
+.grid-gallery-container .grid-gallery-item:hover {
+    opacity: 1
+}
+/* Cada item da galeria */
+.grid-gallery-item {
+    margin: auto;
+    border: 0px solid #ddd;
+    border-radius: 0px;
+    overflow: hidden;
+    width: 300px; /* Define uma largura fixa para cada item */
+    transition: all .3s;
+}
+.grid-gallery-item:hover{
+    transform: translateY(-20px)
+}
+
+.logo img{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1850px;
+    width: 20px;
+    display: block;
+}
+
+.logo1 img{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1810px;
+    width: 20px;
+    display: block;
+}
+
+@media screen and (max-width: 600px){
+    body{
+        height: auto;
+    }
+    .alec{
+        display: block;
+        padding: 0.1px;
+        width: 100;
+    }
+    nav ul li a{
+        font-size: 14px;
+        text-align: center;
+    }
+    .texto1{
+        font-size: 14px;
+        text-align: center;
+    }
+    .grid-gallery-container{
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    .grid-gallery-item{
+        width: 50vw;
+        display: block;
+        margin-bottom: 30px;
+    }
+}
